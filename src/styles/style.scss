@@ -1,0 +1,69 @@
+@import "imports";
+
+* {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background: var(--background-color);
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gold {
+  color: var(--color-gold)
+}
+
+.content {
+  @include flex-col;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  max-width: 1600px;
+  padding-left:80px;
+  padding-right:80px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 769px) {
+  .container {
+    padding-right:17px;
+    padding-left:17px;
+  }
+}
+
+.subtext {
+  font-family: 'Work Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #9B9E9A;
+}
+
+._dark-back {
+  background: var(--background-dark-color);
+}
+
+.view-all {
+  &__link {
+    @include nft-btn;
+    color: var(--color-white);
+  }
+  @media screen and (max-width: 555px){
+    .view-all{
+      &__link{
+        font-size: 18px;
+        padding: 13px 57px;
+      }
+    }
+  }
+}
+
+
