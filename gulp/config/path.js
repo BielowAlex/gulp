@@ -1,4 +1,4 @@
-import * as nodePath from './path.js'
+import * as nodePath from 'path'
 
 const rootFolder = nodePath.basename(nodePath.resolve());
 
