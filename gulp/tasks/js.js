@@ -1,5 +1,4 @@
 import webpack from 'webpack-stream'
-import rename from "gulp-rename";
 
 export const js = () => {
     return app.gulp.src(app.path.src.js, {sourcemaps: app.isDev})
@@ -11,9 +10,17 @@ export const js = () => {
             mode: app.isBuild ? 'production' : 'development',
             output: {
                 filename: 'app.min.js'
-            }
-        }))
+            },
+            module: {
+                rules: [
+                    {
+                        test: /\.(sass|less|css)$/,
+                        use: ["style-loader", "css-loader", 'sass-loader'],
+                    },
+                ],
 
+            },
+        }))
         .pipe(app.gulp.dest(app.path.build.js))
         .pipe(app.plugins.browserSync.stream())
 }
