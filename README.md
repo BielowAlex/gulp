@@ -2,7 +2,6 @@
 
 My personal Gulp build. Adjusted for yourself, with the possibility of uploading the finished result to your GitHub
 repository. With ready-made SASS mixins and a library for Gsap animations. ES6, live reload, file compression, SASS, etc
-***
 
 ## Plugin list :
 
@@ -16,7 +15,6 @@ repository. With ready-made SASS mixins and a library for Gsap animations. ES6, 
 * [Gsap.js](https://www.npmjs.com/package/gsap)
 * [Swiper](https://www.npmjs.com/package/swiper)
 
-***
 
 ## Build mods:
 
